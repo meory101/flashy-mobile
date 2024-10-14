@@ -181,6 +181,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   height: AppHeightManager.h6,
                 ),
                 MainAppButton(
+                  onTap: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      RouteNamedScreens.mainAppBar,
+                      (route) => false,
+                    );
+                  },
                   borderRadius: BorderRadius.circular(AppRadiusManager.r10),
                   height: AppHeightManager.h6,
                   color: AppColorManager.teal,

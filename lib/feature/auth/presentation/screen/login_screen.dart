@@ -32,7 +32,7 @@ class _RegisterScreenState extends State<LoginScreen> {
             image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage(
-                AppImageManager.splash,
+                AppImageManager.loginBackGround,
               ),
             ),
           ),
@@ -53,7 +53,7 @@ class _RegisterScreenState extends State<LoginScreen> {
                   height: AppHeightManager.h2,
                 ),
                 AppTextWidget(
-                  text: "Get Started",
+                  text: "Welcome Back!",
                   style: TextStyle(
                       color: AppColorManager.teal,
                       fontSize: FontSizeManager.fs20,
@@ -141,12 +141,15 @@ class _RegisterScreenState extends State<LoginScreen> {
                   height: AppHeightManager.h6,
                 ),
                 MainAppButton(
+                  onTap: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(RouteNamedScreens.mainAppBar, (route) => false,);
+                  },
                   borderRadius: BorderRadius.circular(AppRadiusManager.r10),
                   height: AppHeightManager.h6,
                   color: AppColorManager.teal,
                   alignment: Alignment.center,
                   child: AppTextWidget(
-                    text: "Sign Up",
+                    text: "Login",
                     style: TextStyle(
                         color: AppColorManager.white,
                         fontSize: FontSizeManager.fs16,

@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'package:flashy/router/router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/helper/app_info_helper.dart';
@@ -7,8 +9,28 @@ import '../../../../core/resource/size_manager.dart';
 import '../../../../core/widget/loading/app_circular_progress_widget.dart';
 import '../../../../core/widget/text/app_text_widget.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    nextPage();
+    super.initState();
+  }
+
+  nextPage() {
+    Future.delayed(const Duration(seconds: 4), () {
+      Navigator.of(context).pushNamedAndRemoveUntil(
+        RouteNamedScreens.login,
+        (route) => false,
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +50,7 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             AppTextWidget(
-              text: AppInfoHelper.getAppVersion(),
+              text: "V ${AppInfoHelper.getAppVersion()}",
               color: AppColorManager.white,
             ),
             SizedBox(
