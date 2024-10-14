@@ -98,8 +98,8 @@ class AppTextFormField extends StatelessWidget {
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
         hintStyle: hintStyle,
-        prefixIconColor: Colors.grey,
-        suffixIconColor: Colors.grey,
+        prefixIconColor: AppColorManager.borderGrey,
+        suffixIconColor: AppColorManager.borderGrey,
         contentPadding: contentPadding ??
             EdgeInsets.symmetric(
                 horizontal: AppWidthManager.w3, vertical: AppHeightManager.h1),
@@ -117,7 +117,7 @@ class AppTextFormField extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(
                 borderRadius != null ? borderRadius! : AppRadiusManager.r10)),
             borderSide: BorderSide(
-              color: AppColorManager.grey,
+              color: AppColorManager.borderGrey,
             )),
         disabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(
@@ -130,7 +130,7 @@ class AppTextFormField extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(
                 borderRadius != null ? borderRadius! : AppRadiusManager.r10)),
             borderSide: const BorderSide(
-              color: AppColorManager.grey,
+              color: AppColorManager.textGrey,
             )),
         border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(

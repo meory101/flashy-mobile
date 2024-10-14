@@ -6,6 +6,9 @@ abstract class AppColorManager {
   static const Color white = Color(0xffffffff);
   static const Color textAppColor = Color(0xff171717);
   static const Color grey = Colors.grey;
+  static const Color background = Color(0xffFBFBFB);
+  static const borderGrey = Color(0xFFEBEBEB);
+  static const textGrey = Color(0xFFB0B0B0);
 
 }
 

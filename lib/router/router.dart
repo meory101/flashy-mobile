@@ -1,3 +1,4 @@
+import 'package:flashy/feature/auth/presentation/screen/register_screen.dart';
 import 'package:flutter/material.dart';
 import '../core/navigation/fade_builder_route.dart';
 import '../core/widget/page/not_found_page.dart';
@@ -7,8 +8,9 @@ import '../feature/intro/presentation/screen/splash_screen.dart';
 /// Eng.Nour Othman(meory)*
 
 abstract class RouteNamedScreens {
-  static String init = splash;
+  static String init = register;
   static const String splash = "/splash";
+  static const String register = "/register";
 
 }
 
@@ -20,6 +22,10 @@ abstract class AppRouter {
       case  RouteNamedScreens.splash:
         return FadeBuilderRoute(
             page: const SplashScreen());
+
+      case  RouteNamedScreens.register:
+        return FadeBuilderRoute(
+            page: const RegisterScreen());
     }
     return FadeBuilderRoute(page: const NotFoundScreen());
   }
