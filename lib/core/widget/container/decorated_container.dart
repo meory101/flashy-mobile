@@ -59,7 +59,7 @@ class DecoratedContainer extends StatelessWidget {
         boxShadow: boxShadow ??
             [
               const BoxShadow(
-                color: AppColorManager.shadow,
+                color: AppColorManager.grey,
                 blurRadius: 2,
                 spreadRadius: 0,
                 offset:

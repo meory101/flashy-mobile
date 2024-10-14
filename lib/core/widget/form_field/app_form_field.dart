@@ -76,7 +76,7 @@ class AppTextFormField extends StatelessWidget {
       readOnly: readOnly ?? false,
       textAlignVertical: textAlignVertical,
       onFieldSubmitted: onFilledSubmited,
-      cursorColor: AppColorManager.darkOrange,
+      cursorColor: AppColorManager.teal,
       validator: validator,
       controller: controller,
       focusNode: focusNode,
@@ -117,7 +117,7 @@ class AppTextFormField extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(
                 borderRadius != null ? borderRadius! : AppRadiusManager.r10)),
             borderSide: BorderSide(
-              color: AppColorManager.lightGreyOpacity6,
+              color: AppColorManager.grey,
             )),
         disabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(
@@ -129,8 +129,8 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(
                 borderRadius != null ? borderRadius! : AppRadiusManager.r10)),
-            borderSide: BorderSide(
-              color: AppColorManager.lightGreyOpacity6,
+            borderSide: const BorderSide(
+              color: AppColorManager.grey,
             )),
         border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(
