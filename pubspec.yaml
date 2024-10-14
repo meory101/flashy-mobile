@@ -26,6 +26,8 @@ dev_dependencies:
   easy_localization: ^3.0.7
   flutter_lints: ^3.0.0
   get_it: ^7.6.4
+  package_info_plus: ^8.0.2
+
 
 
 

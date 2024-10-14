@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:wasity/feature/intro/presentation/screen/splash_screen.dart';
 import '../core/theme/app_theme.dart';
+import '../router/router.dart';
 
 /// Eng.Nour Othman(meory)*
 
@@ -32,9 +33,8 @@ class _InanaaState extends State<Flashy> {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         debugShowCheckedModeBanner: false,
-        home: SplashScreen(),
-        // onGenerateRoute: AppRouter.onGenerateRoute,
-        // initialRoute: RouteNamedScreens.init,
+        onGenerateRoute: AppRouter.onGenerateRoute,
+        initialRoute: RouteNamedScreens.init,
       );
     });
   }
