@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:wasity/feature/intro/presentation/screen/splash_screen.dart';
 import '../core/navigation/fade_builder_route.dart';
 import '../core/widget/page/not_found_page.dart';
 import '../core/injection/injection_container.dart' as di;
+import '../feature/intro/presentation/screen/splash_screen.dart';
 
 /// Eng.Nour Othman(meory)*
 
