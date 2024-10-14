@@ -3,11 +3,11 @@ import 'package:flashy/core/resource/size_manager.dart';
 import 'package:flashy/core/widget/image/main_image_widget.dart';
 import 'package:flashy/core/widget/text/app_text_widget.dart';
 import 'package:flashy/feature/home/presentation/widget/newest_items_grid_view.dart';
+import 'package:flashy/feature/home/presentation/widget/sub_categories_list_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/helper/language_helper.dart';
 import '../../../../core/resource/color_manager.dart';
 import '../widget/home_banners.dart';
-import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
 
 /// Eng.Nour Othman(meory)*
 
@@ -31,7 +31,43 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: AppHeightManager.h3,
               ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: AppWidthManager.w3Point8,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    AppTextWidget(
+                      text: "Hi Nour!",
+                      style: TextStyle(
+                          fontSize: FontSizeManager.fs17,
+                          color: AppColorManager.textAppColor,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    SizedBox(
+                      width: AppWidthManager.w2,
+                    ),
+                    AppTextWidget(
+                      text: "Welcome to Flashy.",
+                      style: TextStyle(
+                          fontSize: FontSizeManager.fs15,
+                          color: AppColorManager.textAppColor,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: AppHeightManager.h2,
+              ),
               const HomeBanners(),
+              SizedBox(
+                height: AppHeightManager.h3,
+              ),
+
+            const SubCategoriesListView(),
+
               SizedBox(
                 height: AppHeightManager.h3,
               ),
@@ -39,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.symmetric(
                   horizontal: AppWidthManager.w3Point8,
                 ),
-                child: NewestItemsGridView(),
+                child: const NewestItemsGridView(),
               )
             ],
           ),
