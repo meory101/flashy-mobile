@@ -9,6 +9,8 @@ abstract class AppColorManager {
   static const Color background = Color(0xffFBFBFB);
   static const borderGrey = Color(0xFFEBEBEB);
   static const textGrey = Color(0xFFB0B0B0);
-
+  static const transparent = Colors.transparent;
+  static const Color shimmerHighlightColor = Color(0xffd9d9d9);
+  static const Color shimmerBaseColor = Color(0xffe0e0e0);
 }
 

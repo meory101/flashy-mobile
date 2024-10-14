@@ -10,6 +10,7 @@ abstract class AppIconManager{
   static String person = '$_iconBasePath/person.svg';
   static String lock = '$_iconBasePath/lock.svg';
   static String email = '$_iconBasePath/email.svg';
+  static String home = '$_iconBasePath/home.svg';
 
 
 

@@ -33,7 +33,7 @@ abstract class AppRouter {
         return SlidDownBuilderRoute(page: const LoginScreen());
 
       case RouteNamedScreens.mainAppBar:
-        return FadeBuilderRoute(page: const MainAppBarScreen());
+        return FadeBuilderRoute(page: const MainAppBottomAppBar());
     }
     return FadeBuilderRoute(page: const NotFoundScreen());
   }

@@ -26,8 +26,11 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   get_it: ^7.6.4
   package_info_plus: ^8.0.2
-
-
+  dots_indicator: ^3.0.0
+  shimmer: ^3.0.0
+  cached_network_image: ^3.3.0
+  carousel_slider: ^5.0.0
+  dynamic_height_grid_view: ^0.0.4
 
 
 flutter:
