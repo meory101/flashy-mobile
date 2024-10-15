@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                           fontSize: FontSizeManager.fs17,
                           color: AppColorManager.textAppColor,
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w700),
                     ),
                     SizedBox(
                       width: AppWidthManager.w2,
@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                           fontSize: FontSizeManager.fs15,
                           color: AppColorManager.textAppColor,
-                          fontWeight: FontWeight.w500),
+                          fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),

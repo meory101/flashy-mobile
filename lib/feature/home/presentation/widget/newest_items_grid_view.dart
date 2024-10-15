@@ -21,9 +21,9 @@ class NewestItemsGridView extends StatelessWidget {
         AppTextWidget(
           text: "newestItems",
           style: TextStyle(
-              fontSize: FontSizeManager.fs17,
+              fontSize: FontSizeManager.fs16,
               color: AppColorManager.textAppColor,
-              fontWeight: FontWeight.w600),
+              fontWeight: FontWeight.w700),
         ),
         SizedBox(
           height: AppHeightManager.h1point8,

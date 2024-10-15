@@ -1,4 +1,5 @@
 
+/// Eng.Nour Othman(meory)*
 
 abstract class AppIconManager{
   static const String _iconBasePath = 'assets/icons';
@@ -34,15 +35,12 @@ abstract class AppIconManager{
   static String trash = '$_iconBasePath/trash.svg';
   static String logout = '$_iconBasePath/logout.svg';
   static String clock = '$_iconBasePath/clock.svg';
-
   static String calendar = '$_iconBasePath/calendar.svg';
   static String note = '$_iconBasePath/note.svg';
   static String ticketDiscount = '$_iconBasePath/ticket_discount.svg';
   static String timer = '$_iconBasePath/timer.svg';
-
   static String arrowMenuUp = '$_iconBasePath/arrow_menu_up.svg';
   static String addCircle = '$_iconBasePath/add_circle.svg';
-
   static String add = '$_iconBasePath/add.svg';
   static String minimize = '$_iconBasePath/minimize.svg';
   static String facebook = '$_iconBasePath/facebook.svg';
