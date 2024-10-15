@@ -26,7 +26,7 @@ class _InanaaState extends State<Flashy> {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveSizer(builder: (context, orientation, screenType) {
+    return ResponsiveSizer(builder: (fcontext, orientation, screenType) {
       return MaterialApp(
         theme: lightTheme(),
         locale: context.locale,
