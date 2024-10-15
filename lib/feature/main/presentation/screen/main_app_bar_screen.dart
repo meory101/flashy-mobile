@@ -1,4 +1,4 @@
-import 'package:flashy/feature/profile/presentation/screen/more_screen.dart';
+import 'package:flashy/feature/categories/presentation/screen/categories_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -8,10 +8,9 @@ import '../../../../core/resource/icon_manager.dart';
 import '../../../../core/resource/size_manager.dart';
 import '../../../../core/widget/text/app_text_widget.dart';
 import '../../../home/presentation/screen/home_screen.dart';
-
+import '../../../more/presentation/screen/more_screen.dart';
 
 /// Eng.Nour Othman(meory)*
-
 
 int selectedIndex = 0;
 
@@ -27,7 +26,7 @@ class MainAppBottomAppBar extends StatefulWidget {
 class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
   final List<Widget> bottomBarScreens = [
     const HomeScreen(),
-    const HomeScreen(),
+    const CategoriesScreen(),
     const HomeScreen(),
     const MoreScreen(),
   ];
@@ -53,7 +52,6 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
             elevation: 0,
             child: Container(
               decoration: BoxDecoration(
-
                 color: AppColorManager.textAppColor,
                 borderRadius: BorderRadius.circular(AppRadiusManager.r30),
               ),
@@ -101,14 +99,17 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     },
                     child: Column(
                       children: [
-                        SvgPicture.asset(AppIconManager.home,
-                            colorFilter: ColorFilter.mode(
-                                selectedIndex == 1
-                                    ? AppColorManager.white
-                                    : AppColorManager.grey,
-                                BlendMode.srcIn)),
+                        Padding(
+                          padding:  EdgeInsets.zero,
+                          child: SvgPicture.asset(AppIconManager.ring,
+                              colorFilter: ColorFilter.mode(
+                                  selectedIndex == 1
+                                      ? AppColorManager.white
+                                      : AppColorManager.grey,
+                                  BlendMode.srcIn)),
+                        ),
                         AppTextWidget(
-                          text: "Search",
+                          text: "Categories",
                           color: selectedIndex == 1
                               ? AppColorManager.white
                               : AppColorManager.grey,
@@ -152,7 +153,6 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     child: Column(
                       children: [
                         SvgPicture.asset(AppIconManager.user,
-
                             colorFilter: ColorFilter.mode(
                                 selectedIndex == 3
                                     ? AppColorManager.white

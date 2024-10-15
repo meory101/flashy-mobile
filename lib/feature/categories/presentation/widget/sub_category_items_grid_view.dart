@@ -1,34 +1,17 @@
 import 'package:flutter/cupertino.dart';
-
-import '../../../../core/resource/color_manager.dart';
-import '../../../../core/resource/font_manager.dart';
-import '../../../../core/resource/size_manager.dart';
-import '../../../../core/widget/text/app_text_widget.dart';
 import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
-import 'item_card.dart';
 
-/// Eng.Nour Othman(meory)*
+import '../../../../core/resource/size_manager.dart';
+import '../../../home/presentation/widget/item_card.dart';
 
-
-class NewestItemsGridView extends StatelessWidget {
-  const NewestItemsGridView({super.key});
+class SubCategoryItemsGridView extends StatelessWidget {
+  const SubCategoryItemsGridView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return
-      Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AppTextWidget(
-          text: "newestItems",
-          style: TextStyle(
-              fontSize: FontSizeManager.fs16,
-              color: AppColorManager.textAppColor,
-              fontWeight: FontWeight.w700),
-        ),
-        SizedBox(
-          height: AppHeightManager.h1point8,
-        ),
         DynamicHeightGridView(
           crossAxisSpacing: AppWidthManager.w3Point8,
           mainAxisSpacing: AppWidthManager.w3Point8,

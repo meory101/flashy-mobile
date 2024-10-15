@@ -65,7 +65,7 @@ class _MoreScreenState extends State<MoreScreen> {
                   BasicsItem(
                     onTap: () {},
                     title: "flashy wholesale jewellery".tr(),
-                    icon: AppIconManager.marker,
+                    icon: AppIconManager.gem,
                   ),
                 ],
               ),

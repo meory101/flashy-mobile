@@ -4,6 +4,8 @@
 abstract class AppIconManager{
   static const String _iconBasePath = 'assets/icons';
 
+  static String ring = '$_iconBasePath/ring.svg';
+  static String gem = '$_iconBasePath/gem.svg';
   static String person = '$_iconBasePath/person.svg';
   static String lock = '$_iconBasePath/lock.svg';
   static String email = '$_iconBasePath/email.svg';

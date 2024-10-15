@@ -10,7 +10,6 @@ import '../../../../core/widget/text/app_text_widget.dart';
 
 /// Eng.Nour Othman(meory)*
 
-
 class BasicsItem extends StatelessWidget {
   const BasicsItem(
       {super.key,
@@ -26,7 +25,6 @@ class BasicsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       overlayColor: const MaterialStatePropertyAll(AppColorManager.transparent),
-
       onTap: onTap,
       child: DecoratedContainer(
         borderRadius: BorderRadius.circular(AppRadiusManager.r15),
@@ -37,7 +35,11 @@ class BasicsItem extends StatelessWidget {
           children: [
             Row(
               children: [
-                SvgPicture.asset(icon),
+                SvgPicture.asset(
+                  icon,
+                  colorFilter:
+                      ColorFilter.mode(AppColorManager.teal, BlendMode.srcIn),
+                ),
                 SizedBox(
                   width: AppWidthManager.w2,
                 ),

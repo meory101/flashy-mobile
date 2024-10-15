@@ -8,8 +8,8 @@ import '../../../../core/widget/image/main_image_widget.dart';
 import '../../../../core/widget/text/app_text_widget.dart';
 /// Eng.Nour Othman(meory)*
 
-class NewestItemCard extends StatelessWidget {
-  const NewestItemCard({super.key});
+class ItemCard extends StatelessWidget {
+  const ItemCard({super.key});
 
   @override
   Widget build(BuildContext context) {
