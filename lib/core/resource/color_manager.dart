@@ -12,5 +12,6 @@ abstract class AppColorManager {
   static const transparent = Colors.transparent;
   static const Color shimmerHighlightColor = Color(0xffd9d9d9);
   static const Color shimmerBaseColor = Color(0xffe0e0e0);
+  static const Color red = Color(0xffff3b30);
 }
 

@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import '../core/theme/app_theme.dart';
 import '../router/router.dart';
 
 /// Eng.Nour Othman(meory)*
@@ -27,6 +28,7 @@ class _InanaaState extends State<Flashy> {
   Widget build(BuildContext context) {
     return ResponsiveSizer(builder: (context, orientation, screenType) {
       return MaterialApp(
+        theme: lightTheme(),
         locale: context.locale,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,

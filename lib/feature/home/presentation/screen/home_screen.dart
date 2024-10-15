@@ -22,10 +22,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColorManager.background,
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
+          child:
+
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
