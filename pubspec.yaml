@@ -34,6 +34,7 @@ dev_dependencies:
   equatable: ^2.0.5
   dartz: ^0.10.1
   connectivity_plus: ^5.0.1
+  flutter_bloc: ^8.1.3
 
 
 
