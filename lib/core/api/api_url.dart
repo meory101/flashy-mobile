@@ -6,7 +6,7 @@ import '../resource/constant_manager.dart';
 class ApiUrl {
   late String _link;
   String baseUrl = '';
-  final String firstBaseUrl = "https://${AppConstantManager.baseUrl}/api/";
+  final String firstBaseUrl = "http://${AppConstantManager.baseUrl}/api/";
   final String secondBaseUrl = "";
   final bool? useSecondBaseUrl;
   ApiUrl(

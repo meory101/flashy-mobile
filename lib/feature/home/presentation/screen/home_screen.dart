@@ -1,8 +1,11 @@
+import 'package:flashy/core/resource/cubit_status_manager.dart';
 import 'package:flashy/core/resource/font_manager.dart';
 import 'package:flashy/core/resource/icon_manager.dart';
 import 'package:flashy/core/resource/size_manager.dart';
 import 'package:flashy/core/widget/image/main_image_widget.dart';
 import 'package:flashy/core/widget/text/app_text_widget.dart';
+import 'package:flashy/feature/home/presentation/cubit/newest_products_cubit.dart';
+import 'package:flashy/feature/home/presentation/cubit/newest_products_state.dart';
 import 'package:flashy/feature/home/presentation/widget/newest_items_grid_view.dart';
 import 'package:flashy/feature/home/presentation/widget/sub_categories_list_view.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +13,8 @@ import '../../../../core/helper/language_helper.dart';
 import '../../../../core/resource/color_manager.dart';
 import '../widget/home_banners.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 /// Eng.Nour Othman(meory)*
 
@@ -67,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     SvgPicture.asset(
                       AppIconManager.gem,
                       colorFilter: ColorFilter.mode(
-                           AppColorManager.teal,
+                          AppColorManager.teal,
                           BlendMode.srcIn),
                     ),
                   ],
@@ -81,16 +86,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: AppHeightManager.h3,
               ),
 
-            const SubCategoriesListView(),
+              const SubCategoriesListView(),
 
               SizedBox(
                 height: AppHeightManager.h3,
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: AppWidthManager.w3Point8,
-                ),
-                child: const NewestItemsGridView(),
+              BlocConsumer<NewestProductsCubit, NewestProductsState>(
+                listener: (context, state) {
+                    if(state.status == CubitStatus.error){
+
+                    }
+                },
+                builder: (context, state) {
+                  if(state.status == CubitStatus.loading){
+                    return Text('loading');
+                  }
+                  return Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: AppWidthManager.w3Point8,
+                    ),
+                    child: const NewestItemsGridView(),
+                  );
+                },
               )
             ],
           ),

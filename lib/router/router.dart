@@ -2,12 +2,16 @@ import 'package:flashy/core/navigation/slid_up_builder_route.dart';
 import 'package:flashy/core/navigation/slide_down_builder_route.dart';
 import 'package:flashy/feature/auth/presentation/screen/login_screen.dart';
 import 'package:flashy/feature/auth/presentation/screen/register_screen.dart';
+import 'package:flashy/feature/home/presentation/cubit/newest_products_cubit.dart';
+import 'package:flashy/feature/home/presentation/widget/newest_items_grid_view.dart';
 import 'package:flashy/feature/main/presentation/screen/main_app_bar_screen.dart';
 import 'package:flutter/material.dart';
 import '../core/navigation/fade_builder_route.dart';
 import '../core/widget/page/not_found_page.dart';
 import '../core/injection/injection_container.dart' as di;
 import '../feature/intro/presentation/screen/splash_screen.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 /// Eng.Nour Othman(meory)*
 
@@ -33,7 +37,12 @@ abstract class AppRouter {
         return SlidDownBuilderRoute(page: const LoginScreen());
 
       case RouteNamedScreens.mainAppBar:
-        return FadeBuilderRoute(page: const MainAppBottomAppBar());
+        return FadeBuilderRoute(
+            page: BlocProvider(
+          create: (context) =>
+              di.sl<NewestProductsCubit>()..getNewestProducts(context: context),
+          child: const MainAppBottomAppBar(),
+        ));
     }
     return FadeBuilderRoute(page: const NotFoundScreen());
   }

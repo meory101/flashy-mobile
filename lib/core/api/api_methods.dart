@@ -1,11 +1,10 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../storage/shared/shared_pref.dart';
 import 'api_url.dart';
 
 //All Api methods with configuration to send http request
 class ApiMethods {
-  late Map<String, String> headers;
+  late Map<String, String> headers ={};
   final bool? isSecondBaseUrl;
 
   ApiMethods({Map<String, String>? header, this.isSecondBaseUrl}) {
@@ -154,3 +153,4 @@ class ApiMethods {
         headers: headers);
   }
 }
+
