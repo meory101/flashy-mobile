@@ -34,7 +34,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: selectedIndex == 0,
-      onPopInvoked: (didPop) {
+      onPopInvokedWithResult:(didPop, result) {
         if (didPop == false) {
           setState(() {
             selectedIndex = 0;
@@ -42,7 +42,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
         } else {
           Navigator.of(context).pop();
         }
-      },
+      } ,
       child: Scaffold(
           backgroundColor: AppColorManager.background,
           bottomNavigationBar: BottomAppBar(
@@ -64,7 +64,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    overlayColor: const MaterialStatePropertyAll(
+                    overlayColor: const WidgetStatePropertyAll(
                         AppColorManager.transparent),
                     onTap: () {
                       setState(() {
@@ -89,7 +89,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     ),
                   ),
                   InkWell(
-                    overlayColor: const MaterialStatePropertyAll(
+                    overlayColor: const WidgetStatePropertyAll(
                         AppColorManager.transparent),
                     onTap: () {
                       setState(() {
@@ -117,7 +117,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     ),
                   ),
                   InkWell(
-                    overlayColor: const MaterialStatePropertyAll(
+                    overlayColor: const WidgetStatePropertyAll(
                         AppColorManager.transparent),
                     onTap: () {
                       setState(() {
@@ -142,7 +142,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     ),
                   ),
                   InkWell(
-                    overlayColor: const MaterialStatePropertyAll(
+                    overlayColor: const WidgetStatePropertyAll(
                         AppColorManager.transparent),
                     onTap: () {
                       setState(() {
