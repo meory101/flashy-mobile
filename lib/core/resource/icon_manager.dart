@@ -1,7 +1,6 @@
-
 /// Eng.Nour Othman(meory)*
 
-abstract class AppIconManager{
+abstract class AppIconManager {
   static const String _iconBasePath = 'assets/icons';
 
   static String ring = '$_iconBasePath/ring.svg';
@@ -13,6 +12,8 @@ abstract class AppIconManager{
   static String email = '$_iconBasePath/email.svg';
   static String home = '$_iconBasePath/home.svg';
   static String user = '$_iconBasePath/user.svg';
+  static String cart = '$_iconBasePath/cart.svg';
+
   static String appLogo = '$_iconBasePath/app_logo.svg';
   static String arrowLeft = '$_iconBasePath/arrow_left.svg';
   static String arrowRight = '$_iconBasePath/arrow_right.svg';
@@ -54,7 +55,4 @@ abstract class AppIconManager{
   static String preparing = '$_iconBasePath/preparing.svg';
   static String onTheWay = '$_iconBasePath/on_the_way.svg';
   static String delivered = '$_iconBasePath/delivered.svg';
-
-
-
 }
