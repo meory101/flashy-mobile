@@ -9,6 +9,7 @@ import '../../../../core/resource/font_manager.dart';
 import '../../../../core/resource/icon_manager.dart';
 import '../../../../core/resource/size_manager.dart';
 import '../../../../core/widget/text/app_text_widget.dart';
+import '../dialog/logout_dialog.dart';
 import '../widget/basics_item.dart';
 import '../widget/more_gride_title_list.dart';
 import '../widget/settings_item.dart';
@@ -88,12 +89,18 @@ class _MoreScreenState extends State<MoreScreen> {
                     icon: AppIconManager.translate,
                   ),
                   SettingsItem(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(RouteNamedScreens.notifications);
+                    },
                     title: "notifications".tr(),
                     icon: AppIconManager.notification,
                   ),
                   SettingsItem(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(RouteNamedScreens.aboutUs);
+                    },
                     title: "aboutUs".tr(),
                     icon: AppIconManager.aboutUs,
                   ),
@@ -103,14 +110,19 @@ class _MoreScreenState extends State<MoreScreen> {
                     icon: AppIconManager.call,
                   ),
                   SettingsItem(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(RouteNamedScreens.privacyPolicy);
+                    },
                     title: "privacyPolicy".tr(),
                     icon: AppIconManager.privacyPolicy,
                     fontSize: FontSizeManager.fs14,
                   ),
                   SettingsItem(
-                    onTap: () {},
-                    title: "signOut".tr(),
+                    onTap: () {
+                      showLogoutDialog(context: context);
+                    },
+                    title: "logout".tr(),
                     icon: AppIconManager.logout,
                   ),
                 ],
