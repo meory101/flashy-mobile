@@ -26,35 +26,42 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
             physics: const NeverScrollableScrollPhysics(),
             itemCount: 10,
             itemBuilder: (context, index) {
-              return Container(
-                padding: EdgeInsets.all(AppWidthManager.w3Point8),
-                color: AppColorManager.white,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(
-                    AppRadiusManager.r15,
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              return Column(
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(AppWidthManager.w3Point8),
+                    decoration: BoxDecoration(
+                      color: AppColorManager.white,
+                      borderRadius: BorderRadius.circular(
+                        AppRadiusManager.r15,
+                      ),
+                    ),
+                    child: Column(
                       children: [
-                        AppTextWidget(
-                          text: "1234-OIOP",
-                          color: AppColorManager.textGrey,
-                          fontSize: FontSizeManager.fs14,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        AppTextWidget(
-                          text: "status",
-                          color: AppColorManager.yellow,
-                          fontSize: FontSizeManager.fs16,
-                          fontWeight: FontWeight.w600,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            AppTextWidget(
+                              text: "1234-OIOP",
+                              color: AppColorManager.grey,
+                              fontSize: FontSizeManager.fs14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            AppTextWidget(
+                              text: "status",
+                              color: AppColorManager.orange,
+                              fontSize: FontSizeManager.fs16,
+                              fontWeight: FontWeight.w600,
+                            )
+                          ],
                         )
                       ],
-                    )
-                  ],
-                ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: AppHeightManager.h1point8,
+                  )
+                ],
               );
             },
           ),

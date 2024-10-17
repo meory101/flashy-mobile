@@ -74,7 +74,7 @@ class _MoreScreenState extends State<MoreScreen> {
                     icon: AppIconManager.gem,
                   ),
                   SizedBox(
-                    height: AppHeightManager.h4,
+                    height: AppHeightManager.h3,
                   ),
                   AppTextWidget(
                     text: 'basics'.tr(),
@@ -88,7 +88,7 @@ class _MoreScreenState extends State<MoreScreen> {
                     iconColor: AppColorManager.textAppColor,
                     onTap: () {
                       Navigator.of(context)
-                          .pushNamed(RouteNamedScreens.wholesaleItems);
+                          .pushNamed(RouteNamedScreens.myOrders);
                     },
                     title: "my orders".tr(),
                     icon: AppIconManager.orders,
@@ -97,7 +97,7 @@ class _MoreScreenState extends State<MoreScreen> {
                 ],
               ),
               SizedBox(
-                height: AppHeightManager.h4,
+                height: AppHeightManager.h3,
               ),
               MoreGridTitleList(
                 title: "settings".tr(),

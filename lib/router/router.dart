@@ -5,6 +5,7 @@ import 'package:flashy/feature/auth/presentation/screen/register_screen.dart';
 import 'package:flashy/feature/home/presentation/cubit/newest_products_cubit.dart';
 import 'package:flashy/feature/main/presentation/screen/main_app_bar_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/aboutus_screen.dart';
+import 'package:flashy/feature/more/presentation/screen/my_orders_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/notifications_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/privacy_policy_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/wholesale_items_screen.dart';
@@ -29,6 +30,8 @@ abstract class RouteNamedScreens {
   static const String notifications = "/notifications";
   static const String aboutUs = "/about-us";
   static const String privacyPolicy = "/privacy-policy";
+  static const String myOrders = "/my-orders";
+
 }
 
 abstract class AppRouter {
@@ -48,6 +51,8 @@ abstract class AppRouter {
         return SlidUpBuilderRoute(page: const PrivacyPolicyScreen());
       case RouteNamedScreens.aboutUs:
         return SlidUpBuilderRoute(page: const AboutUsScreen());
+      case RouteNamedScreens.myOrders:
+        return SlidUpBuilderRoute(page: const MyOrdersScreen());
       case RouteNamedScreens.notifications:
         return SlidUpBuilderRoute(page: const NotificationsScreen());
       case RouteNamedScreens.mainAppBar:
