@@ -1,3 +1,4 @@
+import 'package:flashy/core/resource/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../resource/font_manager.dart';
@@ -5,9 +6,7 @@ import '../../resource/size_manager.dart';
 import '../text/app_text_widget.dart';
 import 'app_form_field.dart';
 
-/**
- * Created by Eng.Eyad AlSayed on 4/23/2024.
- */
+
 
 class TitleAppFormFiled extends StatelessWidget {
   const TitleAppFormFiled(
@@ -63,6 +62,9 @@ class TitleAppFormFiled extends StatelessWidget {
             onChanged: onChanged,
             textInputAction: TextInputAction.next,
             hintText: hint,
+            hintStyle: const TextStyle(
+              color: AppColorManager.textGrey
+            ),
             textInputType: TextInputType.name,
           ),
         ),
