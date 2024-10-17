@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flashy/core/resource/color_manager.dart';
+import 'package:flashy/feature/more/presentation/dialog/language_dialog.dart';
 import 'package:flashy/router/router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -80,7 +81,9 @@ class _MoreScreenState extends State<MoreScreen> {
                 title: "settings".tr(),
                 itemWidgets: [
                   SettingsItem(
-                    onTap: () {},
+                    onTap: () {
+                      showLanguageDialog(context: context);
+                    },
                     title: "language".tr(),
                     icon: AppIconManager.translate,
                   ),

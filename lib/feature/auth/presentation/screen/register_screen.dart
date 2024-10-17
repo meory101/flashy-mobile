@@ -187,7 +187,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       (route) => false,
                     );
                   },
-                  borderRadius: BorderRadius.circular(AppRadiusManager.r10),
                   height: AppHeightManager.h6,
                   color: AppColorManager.teal,
                   alignment: Alignment.center,

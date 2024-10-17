@@ -62,7 +62,7 @@ class MainAppButton extends StatelessWidget {
               : null,
           color: outLinedBorde == true ? AppColorManager.white : color,
           borderRadius:
-              borderRadius ?? BorderRadius.circular(AppRadiusManager.r3),
+              borderRadius ?? BorderRadius.circular(AppRadiusManager.r15),
         ),
         child: child,
       ),
