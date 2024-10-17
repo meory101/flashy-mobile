@@ -58,7 +58,7 @@ class _MoreScreenState extends State<MoreScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   AppTextWidget(
-                    text: 'basics'.tr(),
+                    text: 'flashy'.tr(),
                     fontWeight: FontWeight.w700,
                     fontSize: FontSizeManager.fs17,
                   ),
@@ -70,8 +70,29 @@ class _MoreScreenState extends State<MoreScreen> {
                       Navigator.of(context)
                           .pushNamed(RouteNamedScreens.wholesaleItems);
                     },
-                    title: "flashy wholesale jewellery".tr(),
+                    title: "wholesale jewellery".tr(),
                     icon: AppIconManager.gem,
+                  ),
+                  SizedBox(
+                    height: AppHeightManager.h4,
+                  ),
+                  AppTextWidget(
+                    text: 'basics'.tr(),
+                    fontWeight: FontWeight.w700,
+                    fontSize: FontSizeManager.fs17,
+                  ),
+                  SizedBox(
+                    height: AppHeightManager.h1,
+                  ),
+                  BasicsItem(
+                    iconColor: AppColorManager.textAppColor,
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(RouteNamedScreens.wholesaleItems);
+                    },
+                    title: "my orders".tr(),
+                    icon: AppIconManager.orders,
+
                   ),
                 ],
               ),

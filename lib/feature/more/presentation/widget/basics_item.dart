@@ -15,10 +15,12 @@ class BasicsItem extends StatelessWidget {
       {super.key,
       required this.title,
       required this.icon,
+         this.iconColor,
       required this.onTap});
 
   final String title;
   final String icon;
+  final Color? iconColor;
   final Function() onTap;
 
   @override
@@ -38,7 +40,11 @@ class BasicsItem extends StatelessWidget {
                 SvgPicture.asset(
                   icon,
                   colorFilter:
-                      ColorFilter.mode(AppColorManager.teal, BlendMode.srcIn),
+                      ColorFilter.mode(
+                          iconColor??
+                          AppColorManager.teal
+
+                          , BlendMode.srcIn),
                 ),
                 SizedBox(
                   width: AppWidthManager.w2,

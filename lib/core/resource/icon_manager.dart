@@ -5,6 +5,8 @@ abstract class AppIconManager{
   static const String _iconBasePath = 'assets/icons';
 
   static String ring = '$_iconBasePath/ring.svg';
+  static String orders = '$_iconBasePath/layers.svg';
+
   static String gem = '$_iconBasePath/gem.svg';
   static String person = '$_iconBasePath/person.svg';
   static String lock = '$_iconBasePath/lock.svg';
@@ -29,7 +31,6 @@ abstract class AppIconManager{
   static String warning = '$_iconBasePath/warning.svg';
   static String done = '$_iconBasePath/done.svg';
   static String edit = '$_iconBasePath/edit.svg';
-  static String orders = '$_iconBasePath/orders.svg';
   static String aboutUs = '$_iconBasePath/about_us.svg';
   static String call = '$_iconBasePath/call.svg';
   static String privacyPolicy = '$_iconBasePath/privacy_policy.svg';
