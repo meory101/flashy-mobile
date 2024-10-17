@@ -1,12 +1,16 @@
 
-/**
- * Created by Eng.Eyad AlSayed on 4/14/2024.
- */
-
+/// Eng.Nour Othman(meory)*
 
 abstract class AppIconManager{
   static const String _iconBasePath = 'assets/icons';
 
+  static String ring = '$_iconBasePath/ring.svg';
+  static String gem = '$_iconBasePath/gem.svg';
+  static String person = '$_iconBasePath/person.svg';
+  static String lock = '$_iconBasePath/lock.svg';
+  static String email = '$_iconBasePath/email.svg';
+  static String home = '$_iconBasePath/home.svg';
+  static String user = '$_iconBasePath/user.svg';
   static String appLogo = '$_iconBasePath/app_logo.svg';
   static String arrowLeft = '$_iconBasePath/arrow_left.svg';
   static String arrowRight = '$_iconBasePath/arrow_right.svg';
@@ -17,7 +21,6 @@ abstract class AppIconManager{
   static String arrowMenuDown = '$_iconBasePath/arrow_menu_down.svg';
   static String arrowMenuLeft = '$_iconBasePath/arrow_menu_left.svg';
   static String arrowMenuRight = '$_iconBasePath/arrow_menu_right.svg';
-  static String home = '$_iconBasePath/home.svg';
   static String more = '$_iconBasePath/more.svg';
   static String restaurants = '$_iconBasePath/restaurants.svg';
   static String star = '$_iconBasePath/star.svg';
@@ -34,17 +37,23 @@ abstract class AppIconManager{
   static String trash = '$_iconBasePath/trash.svg';
   static String logout = '$_iconBasePath/logout.svg';
   static String clock = '$_iconBasePath/clock.svg';
-
-  static String calendar = '$_iconBasePath/clock.svg';
-  static String note = '$_iconBasePath/clock.svg';
-  static String ticketDiscount = '$_iconBasePath/clock.svg';
-  static String timer = '$_iconBasePath/clock.svg';
-
+  static String calendar = '$_iconBasePath/calendar.svg';
+  static String note = '$_iconBasePath/note.svg';
+  static String ticketDiscount = '$_iconBasePath/ticket_discount.svg';
+  static String timer = '$_iconBasePath/timer.svg';
   static String arrowMenuUp = '$_iconBasePath/arrow_menu_up.svg';
   static String addCircle = '$_iconBasePath/add_circle.svg';
-
   static String add = '$_iconBasePath/add.svg';
   static String minimize = '$_iconBasePath/minimize.svg';
+  static String facebook = '$_iconBasePath/facebook.svg';
+  static String instagram = '$_iconBasePath/instagram.svg';
+  static String linkedIn = '$_iconBasePath/linkedin.svg';
+  static String sms = '$_iconBasePath/sms.svg';
+  static String global = '$_iconBasePath/global.svg';
+  static String preparing = '$_iconBasePath/preparing.svg';
+  static String onTheWay = '$_iconBasePath/on_the_way.svg';
+  static String delivered = '$_iconBasePath/delivered.svg';
+
 
 
 }
