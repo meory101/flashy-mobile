@@ -85,12 +85,6 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: AppHeightManager.h3,
               ),
-
-              const SubCategoriesListView(),
-
-              SizedBox(
-                height: AppHeightManager.h3,
-              ),
               BlocConsumer<NewestProductsCubit, NewestProductsState>(
                 listener: (context, state) {
                     if(state.status == CubitStatus.error){
@@ -98,9 +92,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     }
                 },
                 builder: (context, state) {
-                  if(state.status == CubitStatus.loading){
-                    return Text('loading');
-                  }
+                  // if(state.status == CubitStatus.loading){
+                  //   return Text('loading');
+                  // }
                   return Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: AppWidthManager.w3Point8,

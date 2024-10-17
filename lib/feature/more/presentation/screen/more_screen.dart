@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flashy/core/resource/color_manager.dart';
+import 'package:flashy/router/router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -34,20 +35,20 @@ class _MoreScreenState extends State<MoreScreen> {
               SizedBox(
                 height: AppHeightManager.h3,
               ),
-              AppTextWidget(text: "Nour Othman",
-              style: TextStyle(
-                color: AppColorManager.textAppColor,
-                fontSize: FontSizeManager.fs17,
-                fontWeight: FontWeight.w700
+              AppTextWidget(
+                text: "Nour Othman",
+                style: TextStyle(
+                    color: AppColorManager.textAppColor,
+                    fontSize: FontSizeManager.fs17,
+                    fontWeight: FontWeight.w700),
               ),
-
+              AppTextWidget(
+                text: "othmannour2001@gmail.com",
+                style: TextStyle(
+                    color: AppColorManager.textAppColor,
+                    fontSize: FontSizeManager.fs15,
+                    fontWeight: FontWeight.w600),
               ),
-          AppTextWidget(text: "othmannour2001@gmail.com",
-            style: TextStyle(
-                color: AppColorManager.textAppColor,
-                fontSize: FontSizeManager.fs15,
-                fontWeight: FontWeight.w600
-            ),),
               SizedBox(
                 height: AppHeightManager.h4,
               ),
@@ -63,7 +64,10 @@ class _MoreScreenState extends State<MoreScreen> {
                     height: AppHeightManager.h1,
                   ),
                   BasicsItem(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(RouteNamedScreens.wholesaleItems);
+                    },
                     title: "flashy wholesale jewellery".tr(),
                     icon: AppIconManager.gem,
                   ),
@@ -106,7 +110,6 @@ class _MoreScreenState extends State<MoreScreen> {
                     title: "signOut".tr(),
                     icon: AppIconManager.logout,
                   ),
-
                 ],
                 separatorWidget: SizedBox(
                   height: AppHeightManager.h1,

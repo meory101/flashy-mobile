@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import '../../../../core/resource/color_manager.dart';
 import '../../../../core/resource/font_manager.dart';
 import '../../../../core/resource/size_manager.dart';
+import '../../../../core/widget/product/item_card.dart';
 import '../../../../core/widget/text/app_text_widget.dart';
 import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
-import 'item_card.dart';
 
 /// Eng.Nour Othman(meory)*
 
@@ -30,6 +30,7 @@ class NewestItemsGridView extends StatelessWidget {
           height: AppHeightManager.h1point8,
         ),
         DynamicHeightGridView(
+
           crossAxisSpacing: AppWidthManager.w3Point8,
           mainAxisSpacing: AppWidthManager.w3Point8,
           crossAxisCount: 2,

@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
-
 import '../../../../core/resource/size_manager.dart';
-import '../../../home/presentation/widget/item_card.dart';
+import '../../../../core/widget/product/item_card.dart';
 
 class SubCategoryItemsGridView extends StatelessWidget {
   const SubCategoryItemsGridView({super.key});

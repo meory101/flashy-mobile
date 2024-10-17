@@ -5,6 +5,7 @@ import 'package:flashy/feature/auth/presentation/screen/register_screen.dart';
 import 'package:flashy/feature/home/presentation/cubit/newest_products_cubit.dart';
 import 'package:flashy/feature/home/presentation/widget/newest_items_grid_view.dart';
 import 'package:flashy/feature/main/presentation/screen/main_app_bar_screen.dart';
+import 'package:flashy/feature/more/presentation/screen/wholesale_items_screen.dart';
 import 'package:flutter/material.dart';
 import '../core/navigation/fade_builder_route.dart';
 import '../core/widget/page/not_found_page.dart';
@@ -21,6 +22,8 @@ abstract class RouteNamedScreens {
   static const String register = "/register";
   static const String login = "/login";
   static const String mainAppBar = "/main-app-bar";
+  static const String wholesaleItems = "/wholesale-items";
+
 }
 
 abstract class AppRouter {
@@ -35,7 +38,8 @@ abstract class AppRouter {
         return SlidUpBuilderRoute(page: const RegisterScreen());
       case RouteNamedScreens.login:
         return SlidDownBuilderRoute(page: const LoginScreen());
-
+      case RouteNamedScreens.wholesaleItems:
+        return SlidDownBuilderRoute(page: const WholesaleItemsScreen());
       case RouteNamedScreens.mainAppBar:
         return FadeBuilderRoute(
             page: BlocProvider(

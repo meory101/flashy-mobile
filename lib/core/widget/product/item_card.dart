@@ -6,6 +6,7 @@ import '../../../../core/resource/font_manager.dart';
 import '../../../../core/resource/size_manager.dart';
 import '../../../../core/widget/image/main_image_widget.dart';
 import '../../../../core/widget/text/app_text_widget.dart';
+
 /// Eng.Nour Othman(meory)*
 
 class ItemCard extends StatelessWidget {
@@ -61,17 +62,17 @@ class ItemCard extends StatelessWidget {
                           boxShadow: [
                             LanguageHelper.checkIfLTR(context: context)
                                 ? const BoxShadow(
-                                    color: AppColorManager.borderGrey,
-                                    offset: Offset(4, -2),
-                                    blurRadius: 7,
-                                    spreadRadius: 1,
-                                  )
+                              color: AppColorManager.borderGrey,
+                              offset: Offset(4, -2),
+                              blurRadius: 7,
+                              spreadRadius: 1,
+                            )
                                 : const BoxShadow(
-                                    color: AppColorManager.borderGrey,
-                                    offset: Offset(-4, -2),
-                                    blurRadius: 7,
-                                    spreadRadius: 1,
-                                  )
+                              color: AppColorManager.borderGrey,
+                              offset: Offset(-4, -2),
+                              blurRadius: 7,
+                              spreadRadius: 1,
+                            )
                           ]),
                     ),
                     Flexible(
