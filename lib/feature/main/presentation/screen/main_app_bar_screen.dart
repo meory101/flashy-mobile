@@ -186,6 +186,3 @@ class BottomAppBarArgs {
   BottomAppBarArgs({this.index});
 }
 
-
-
-

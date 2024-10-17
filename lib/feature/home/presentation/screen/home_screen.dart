@@ -7,7 +7,7 @@ import 'package:flashy/core/widget/text/app_text_widget.dart';
 import 'package:flashy/feature/home/presentation/cubit/newest_products_cubit.dart';
 import 'package:flashy/feature/home/presentation/cubit/newest_products_state.dart';
 import 'package:flashy/feature/home/presentation/widget/newest_items_grid_view.dart';
-import 'package:flashy/feature/home/presentation/widget/sub_categories_list_view.dart';
+import 'package:flashy/feature/categories/presentation/widget/sub_categories_list_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/helper/language_helper.dart';
 import '../../../../core/resource/color_manager.dart';
