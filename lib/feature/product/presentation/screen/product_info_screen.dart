@@ -28,9 +28,6 @@ class _ProductItemScreenState extends State<ProductInfoScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: AppHeightManager.h3,
-              ),
               const ProductImageSlider(),
               Padding(
                 padding: EdgeInsets.all(AppWidthManager.w3Point8),

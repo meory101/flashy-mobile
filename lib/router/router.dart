@@ -44,9 +44,9 @@ abstract class AppRouter {
       case RouteNamedScreens.splash:
         return FadeBuilderRoute(page: const SplashScreen());
       case RouteNamedScreens.register:
-        return SlidUpBuilderRoute(page: const RegisterScreen());
+        return FadeBuilderRoute(page: const RegisterScreen());
       case RouteNamedScreens.login:
-        return SlidDownBuilderRoute(page: const LoginScreen());
+        return FadeBuilderRoute(page: const LoginScreen());
       case RouteNamedScreens.wholesaleItems:
         return SlidUpBuilderRoute(page: const WholesaleItemsScreen());
       case RouteNamedScreens.privacyPolicy:

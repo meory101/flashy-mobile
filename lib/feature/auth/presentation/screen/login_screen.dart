@@ -32,16 +32,16 @@ class _RegisterScreenState extends State<LoginScreen> {
             image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage(
-                AppImageManager.loginBackGround,
+                AppImageManager.splash,
               ),
             ),
           ),
           child: Container(
             padding: EdgeInsets.all(AppWidthManager.w3Point8),
             margin: EdgeInsets.only(
-                top: AppHeightManager.h25,
-                left: AppWidthManager.w3Point8,
-                right: AppWidthManager.w3Point8,
+                top: AppHeightManager.h20,
+                // left: AppWidthManager.w3Point8,
+                // right: AppWidthManager.w3Point8,
                 bottom: AppHeightManager.h1point8),
             decoration: BoxDecoration(
                 color: AppColorManager.background,

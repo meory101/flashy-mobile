@@ -45,6 +45,7 @@ class _ProductTotalState extends State<ProductTotal> {
               ),
             ],
           ),
+
           Container(
             height: AppHeightManager.h4,
             decoration: const BoxDecoration(
@@ -58,6 +59,7 @@ class _ProductTotalState extends State<ProductTotal> {
             child: Row(
               children: [
                 IconButton(
+                  highlightColor: AppColorManager.transparent,
                   onPressed: () {
                     if (_quantity > 1) {
                       setState(() {
@@ -118,6 +120,7 @@ class _ProductTotalState extends State<ProductTotal> {
                   ),
                 ),
                 IconButton(
+                  highlightColor: AppColorManager.transparent,
                   onPressed: () {
                     setState(() {
                       _quantity++;
