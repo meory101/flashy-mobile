@@ -40,8 +40,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
             padding: EdgeInsets.all(AppWidthManager.w3Point8),
             margin: EdgeInsets.only(
                 top: AppHeightManager.h20,
-                // left: AppWidthManager.w3Point8,
-                // right: AppWidthManager.w3Point8,
+                left: AppWidthManager.w3Point8,
+                right: AppWidthManager.w3Point8,
                 bottom: AppHeightManager.h1point8
 
             ),
