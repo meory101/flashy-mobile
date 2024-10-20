@@ -22,7 +22,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 /// Eng.Nour Othman(meory)*
 
 abstract class RouteNamedScreens {
-  static String init = productInfo;
+  static String init = splash;
   static const String splash = "/splash";
   static const String register = "/register";
   static const String login = "/login";

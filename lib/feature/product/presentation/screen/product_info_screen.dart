@@ -21,6 +21,7 @@ class _ProductItemScreenState extends State<ProductInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MainAppBar(title: ""),
       bottomSheet: MainAppButton(
         alignment: Alignment.center,
         margin: EdgeInsets.all(AppWidthManager.w3Point8),
@@ -101,7 +102,7 @@ class _ProductItemScreenState extends State<ProductInfoScreen> {
                           text: "\$${(50 * _quantity).toStringAsFixed(2)}",
                           style: TextStyle(
                               fontSize: FontSizeManager.fs16,
-                              color: AppColorManager.teal,
+                              color: AppColorManager.black,
                               fontWeight: FontWeight.w700),
                         ),
                       ],
@@ -112,7 +113,7 @@ class _ProductItemScreenState extends State<ProductInfoScreen> {
                           color: AppColorManager.white,
                           boxShadow: [
                             BoxShadow(
-                                color: AppColorManager.textGrey,
+                                color: AppColorManager.borderGrey,
                                 spreadRadius: 1,
                                 blurRadius: 1)
                           ]),
@@ -137,14 +138,14 @@ class _ProductItemScreenState extends State<ProductInfoScreen> {
                                 right:
                                     LanguageHelper.checkIfLTR(context: context)
                                         ? const BorderSide(
-                                            width: 2,
+                                            width: 1,
                                             color: AppColorManager.borderGrey,
                                           )
                                         : BorderSide.none,
                                 left:
                                     !LanguageHelper.checkIfLTR(context: context)
                                         ? const BorderSide(
-                                            width: 2,
+                                            width: 1,
                                             color: AppColorManager.borderGrey,
                                           )
                                         : BorderSide.none,
@@ -170,14 +171,14 @@ class _ProductItemScreenState extends State<ProductInfoScreen> {
                                 right:
                                     LanguageHelper.checkIfLTR(context: context)
                                         ? const BorderSide(
-                                            width: 2,
+                                            width: 1,
                                             color: AppColorManager.borderGrey,
                                           )
                                         : BorderSide.none,
                                 left:
                                     !LanguageHelper.checkIfLTR(context: context)
                                         ? const BorderSide(
-                                            width: 2,
+                                            width: 1,
                                             color: AppColorManager.borderGrey,
                                           )
                                         : BorderSide.none,
