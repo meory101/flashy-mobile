@@ -5,9 +5,11 @@ import 'package:flashy/feature/auth/presentation/screen/register_screen.dart';
 import 'package:flashy/feature/home/presentation/cubit/newest_products_cubit.dart';
 import 'package:flashy/feature/main/presentation/screen/main_app_bar_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/aboutus_screen.dart';
+import 'package:flashy/feature/more/presentation/screen/my_orders_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/notifications_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/privacy_policy_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/wholesale_items_screen.dart';
+import 'package:flashy/feature/product/presentation/screen/product_info_screen.dart';
 import 'package:flutter/material.dart';
 import '../core/navigation/fade_builder_route.dart';
 import '../core/widget/page/not_found_page.dart';
@@ -29,6 +31,9 @@ abstract class RouteNamedScreens {
   static const String notifications = "/notifications";
   static const String aboutUs = "/about-us";
   static const String privacyPolicy = "/privacy-policy";
+  static const String myOrders = "/my-orders";
+  static const String productInfo = "/product-info";
+
 }
 
 abstract class AppRouter {
@@ -39,17 +44,21 @@ abstract class AppRouter {
       case RouteNamedScreens.splash:
         return FadeBuilderRoute(page: const SplashScreen());
       case RouteNamedScreens.register:
-        return SlidUpBuilderRoute(page: const RegisterScreen());
+        return FadeBuilderRoute(page: const RegisterScreen());
       case RouteNamedScreens.login:
-        return SlidDownBuilderRoute(page: const LoginScreen());
+        return FadeBuilderRoute(page: const LoginScreen());
       case RouteNamedScreens.wholesaleItems:
         return SlidUpBuilderRoute(page: const WholesaleItemsScreen());
       case RouteNamedScreens.privacyPolicy:
         return SlidUpBuilderRoute(page: const PrivacyPolicyScreen());
       case RouteNamedScreens.aboutUs:
         return SlidUpBuilderRoute(page: const AboutUsScreen());
+      case RouteNamedScreens.myOrders:
+        return SlidUpBuilderRoute(page: const MyOrdersScreen());
       case RouteNamedScreens.notifications:
         return SlidUpBuilderRoute(page: const NotificationsScreen());
+      case RouteNamedScreens.productInfo:
+        return SlidUpBuilderRoute(page: const ProductInfoScreen());
       case RouteNamedScreens.mainAppBar:
         return FadeBuilderRoute(
             page: BlocProvider(

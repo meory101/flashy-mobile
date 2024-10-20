@@ -1,7 +1,10 @@
+import 'package:flashy/feature/cart/presentation/screen/cart.dart';
 import 'package:flashy/feature/categories/presentation/screen/categories_screen.dart';
+import 'package:flashy/feature/product/presentation/screen/product_info_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../../../core/resource/color_manager.dart';
 import '../../../../core/resource/icon_manager.dart';
 import '../../../../core/resource/size_manager.dart';
@@ -26,23 +29,23 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
   final List<Widget> bottomBarScreens = [
     const HomeScreen(),
     const CategoriesScreen(),
-    const HomeScreen(),
+    const CartScreen(),
     const MoreScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return PopScope(
-      canPop: selectedIndex == 0,
-      onPopInvokedWithResult:(didPop, result) {
-        if (didPop == false) {
+    return WillPopScope(
+      onWillPop: () async {
+        if (selectedIndex == 0) {
+          return true;
+        } else {
           setState(() {
             selectedIndex = 0;
           });
-        } else {
-          Navigator.of(context).pop();
+          return false;
         }
-      } ,
+      },
       child: Scaffold(
           backgroundColor: AppColorManager.background,
           bottomNavigationBar: BottomAppBar(
@@ -64,7 +67,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    overlayColor: const WidgetStatePropertyAll(
+                    overlayColor: const MaterialStatePropertyAll(
                         AppColorManager.transparent),
                     onTap: () {
                       setState(() {
@@ -80,7 +83,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                                     : AppColorManager.grey,
                                 BlendMode.srcIn)),
                         AppTextWidget(
-                          text: "home",
+                          text: "Home",
                           color: selectedIndex == 0
                               ? AppColorManager.white
                               : AppColorManager.grey,
@@ -89,7 +92,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     ),
                   ),
                   InkWell(
-                    overlayColor: const WidgetStatePropertyAll(
+                    overlayColor: const MaterialStatePropertyAll(
                         AppColorManager.transparent),
                     onTap: () {
                       setState(() {
@@ -98,15 +101,12 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     },
                     child: Column(
                       children: [
-                        Padding(
-                          padding:  EdgeInsets.zero,
-                          child: SvgPicture.asset(AppIconManager.ring,
-                              colorFilter: ColorFilter.mode(
-                                  selectedIndex == 1
-                                      ? AppColorManager.white
-                                      : AppColorManager.grey,
-                                  BlendMode.srcIn)),
-                        ),
+                        SvgPicture.asset(AppIconManager.ring,
+                            colorFilter: ColorFilter.mode(
+                                selectedIndex == 1
+                                    ? AppColorManager.white
+                                    : AppColorManager.grey,
+                                BlendMode.srcIn)),
                         AppTextWidget(
                           text: "Categories",
                           color: selectedIndex == 1
@@ -117,7 +117,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     ),
                   ),
                   InkWell(
-                    overlayColor: const WidgetStatePropertyAll(
+                    overlayColor: const MaterialStatePropertyAll(
                         AppColorManager.transparent),
                     onTap: () {
                       setState(() {
@@ -126,14 +126,14 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     },
                     child: Column(
                       children: [
-                        SvgPicture.asset(AppIconManager.home,
+                        SvgPicture.asset(AppIconManager.cart,
                             colorFilter: ColorFilter.mode(
                                 selectedIndex == 2
                                     ? AppColorManager.white
                                     : AppColorManager.grey,
                                 BlendMode.srcIn)),
                         AppTextWidget(
-                          text: "Bookings",
+                          text: "Cart",
                           color: selectedIndex == 2
                               ? AppColorManager.white
                               : AppColorManager.grey,
@@ -142,7 +142,7 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
                     ),
                   ),
                   InkWell(
-                    overlayColor: const WidgetStatePropertyAll(
+                    overlayColor: const MaterialStatePropertyAll(
                         AppColorManager.transparent),
                     onTap: () {
                       setState(() {
@@ -183,6 +183,6 @@ class _MainAppBottomAppBarState extends State<MainAppBottomAppBar> {
 
 class BottomAppBarArgs {
   int? index;
+
   BottomAppBarArgs({this.index});
 }
-

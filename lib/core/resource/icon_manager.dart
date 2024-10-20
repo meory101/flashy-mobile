@@ -1,16 +1,19 @@
-
 /// Eng.Nour Othman(meory)*
 
-abstract class AppIconManager{
+abstract class AppIconManager {
   static const String _iconBasePath = 'assets/icons';
 
   static String ring = '$_iconBasePath/ring.svg';
+  static String orders = '$_iconBasePath/layers.svg';
+
   static String gem = '$_iconBasePath/gem.svg';
   static String person = '$_iconBasePath/person.svg';
   static String lock = '$_iconBasePath/lock.svg';
   static String email = '$_iconBasePath/email.svg';
   static String home = '$_iconBasePath/home.svg';
   static String user = '$_iconBasePath/user.svg';
+  static String cart = '$_iconBasePath/cart.svg';
+
   static String appLogo = '$_iconBasePath/app_logo.svg';
   static String arrowLeft = '$_iconBasePath/arrow_left.svg';
   static String arrowRight = '$_iconBasePath/arrow_right.svg';
@@ -29,7 +32,6 @@ abstract class AppIconManager{
   static String warning = '$_iconBasePath/warning.svg';
   static String done = '$_iconBasePath/done.svg';
   static String edit = '$_iconBasePath/edit.svg';
-  static String orders = '$_iconBasePath/orders.svg';
   static String aboutUs = '$_iconBasePath/about_us.svg';
   static String call = '$_iconBasePath/call.svg';
   static String privacyPolicy = '$_iconBasePath/privacy_policy.svg';
@@ -53,7 +55,4 @@ abstract class AppIconManager{
   static String preparing = '$_iconBasePath/preparing.svg';
   static String onTheWay = '$_iconBasePath/on_the_way.svg';
   static String delivered = '$_iconBasePath/delivered.svg';
-
-
-
 }

@@ -104,7 +104,7 @@ ThemeData lightTheme() {
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppRadiusManager.r10),
-        borderSide: BorderSide(color: AppColorManager.borderGrey),
+        borderSide: const BorderSide(color: AppColorManager.borderGrey),
       ),
       contentPadding: EdgeInsets.symmetric(
           horizontal: AppWidthManager.w16, vertical: AppHeightManager.h1point5),
