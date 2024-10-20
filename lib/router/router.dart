@@ -9,6 +9,7 @@ import 'package:flashy/feature/more/presentation/screen/my_orders_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/notifications_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/privacy_policy_screen.dart';
 import 'package:flashy/feature/more/presentation/screen/wholesale_items_screen.dart';
+import 'package:flashy/feature/product/presentation/screen/product_info_screen.dart';
 import 'package:flutter/material.dart';
 import '../core/navigation/fade_builder_route.dart';
 import '../core/widget/page/not_found_page.dart';
@@ -21,7 +22,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 /// Eng.Nour Othman(meory)*
 
 abstract class RouteNamedScreens {
-  static String init = splash;
+  static String init = productInfo;
   static const String splash = "/splash";
   static const String register = "/register";
   static const String login = "/login";
@@ -31,6 +32,7 @@ abstract class RouteNamedScreens {
   static const String aboutUs = "/about-us";
   static const String privacyPolicy = "/privacy-policy";
   static const String myOrders = "/my-orders";
+  static const String productInfo = "/product-info";
 
 }
 
@@ -55,6 +57,8 @@ abstract class AppRouter {
         return SlidUpBuilderRoute(page: const MyOrdersScreen());
       case RouteNamedScreens.notifications:
         return SlidUpBuilderRoute(page: const NotificationsScreen());
+      case RouteNamedScreens.productInfo:
+        return SlidUpBuilderRoute(page: const ProductInfoScreen());
       case RouteNamedScreens.mainAppBar:
         return FadeBuilderRoute(
             page: BlocProvider(

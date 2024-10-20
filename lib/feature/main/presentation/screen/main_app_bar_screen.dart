@@ -1,6 +1,6 @@
 import 'package:flashy/feature/cart/presentation/screen/cart.dart';
 import 'package:flashy/feature/categories/presentation/screen/categories_screen.dart';
-import 'package:flashy/feature/product/presentation/screen/productinfo.dart';
+import 'package:flashy/feature/product/presentation/screen/product_info_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

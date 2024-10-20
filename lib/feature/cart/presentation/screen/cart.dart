@@ -144,6 +144,7 @@ class _CartScreenState extends State<CartScreen> {
             ),
             SizedBox(height: AppHeightManager.h02),
             ListView.builder(
+              padding: EdgeInsets.zero,
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               itemCount: products.length,
@@ -227,7 +228,7 @@ class _CartScreenState extends State<CartScreen> {
                 );
               },
             ),
-            SizedBox(height: AppHeightManager.h10),
+            SizedBox(height: AppHeightManager.h2),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

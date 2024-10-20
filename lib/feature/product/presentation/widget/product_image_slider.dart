@@ -1,41 +1,37 @@
 import 'package:flutter/cupertino.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:dots_indicator/dots_indicator.dart';
+
 import '../../../../core/helper/language_helper.dart';
 import '../../../../core/resource/color_manager.dart';
 import '../../../../core/resource/size_manager.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:dots_indicator/dots_indicator.dart';
 import '../../../../core/widget/image/main_image_widget.dart';
-
-
-/// Eng.Nour Othman(meory)*
-
-class HomeBanners extends StatelessWidget {
-  const HomeBanners({super.key});
+class ProductImageSlider extends StatelessWidget {
+  const ProductImageSlider({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return
-
-      Column(
+    return    Column(
       children: [
         CarouselSlider(
             options: CarouselOptions(
               onPageChanged: (index, reason) {},
-              aspectRatio: AppWidthManager.w92 / AppHeightManager.h20,
+              aspectRatio: AppWidthManager.w92 / AppHeightManager.h40,
               enableInfiniteScroll: true,
               autoPlay: true,
               viewportFraction: 1,
             ),
             items: [
               Container(
-                  width: AppWidthManager.w92,
-                  decoration: BoxDecoration(
-                      borderRadius:
-                          BorderRadius.circular(AppRadiusManager.r15)),
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  child: MainImageWidget(
-                    imageUrl: "",
-                  ))
+                width: AppWidthManager.w92,
+                decoration: BoxDecoration(
+                    borderRadius:
+                    BorderRadius.circular(AppRadiusManager.r15)),
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: const MainImageWidget(
+                  imageUrl: "",
+                ),
+              )
             ]),
         SizedBox(
           height: AppHeightManager.h1point8,
