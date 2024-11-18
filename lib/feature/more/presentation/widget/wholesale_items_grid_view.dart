@@ -14,7 +14,9 @@ class WholesaleItemsGridView extends StatelessWidget {
       mainAxisSpacing: AppWidthManager.w3Point8,
       crossAxisCount: 2,
       builder: (context, index) {
-        return const ItemCard();
+        return  ItemCard(
+          index: index+2,
+        );
       },
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),

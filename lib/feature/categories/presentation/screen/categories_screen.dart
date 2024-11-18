@@ -21,10 +21,10 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
             SizedBox(
               height: AppHeightManager.h3,
             ),
-            SizedBox(
-              height: AppHeightManager.h5,
-              child: const SubCategoriesListView()
-            ),
+            // SizedBox(
+            //   height: AppHeightManager.h5,
+            //   child: const SubCategoriesListView()
+            // ),
             SizedBox(
               height: AppHeightManager.h2point5,
             ),
@@ -32,7 +32,9 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
               padding: EdgeInsets.symmetric(
                 horizontal: AppWidthManager.w3Point8,
               ),
-              child: const SubCategoryItemsGridView(),
+              child: const SubCategoryItemsGridView(
+
+              ),
             )
           ],
         ),

@@ -1,3 +1,7 @@
+import 'dart:math';
+
+import 'package:flashy/core/resource/icon_manager.dart';
+import 'package:flashy/core/resource/image_manager.dart';
 import 'package:flashy/router/router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,12 +16,12 @@ import '../../../../core/widget/text/app_text_widget.dart';
 /// Eng.Nour Othman(meory)*
 
 class ItemCard extends StatelessWidget {
-  const ItemCard({super.key});
+  final int? index;
+  const ItemCard({super.key, this.index});
 
   @override
   Widget build(BuildContext context) {
     return
-
       InkWell(
         onTap: () {
           Navigator.of(context).pushNamed(RouteNamedScreens.productInfo);
@@ -40,7 +44,7 @@ class ItemCard extends StatelessWidget {
           children: [
             MainImageWidget(
               height: AppHeightManager.h20,
-              imageUrl: "ddddd",
+              imagePath:'assets/images/${index}.png',
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -53,36 +57,6 @@ class ItemCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Container(
-                        height: AppHeightManager.h4,
-                        width: AppHeightManager.h4,
-                        margin: EdgeInsets.only(
-                            left: LanguageHelper.checkIfLTR(context: context)
-                                ? 0
-                                : AppWidthManager.w1Point8,
-                            right: LanguageHelper.checkIfLTR(context: context)
-                                ? AppWidthManager.w1Point8
-                                : 0),
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: AppColorManager.white, width: 2),
-                            shape: BoxShape.circle,
-                            boxShadow: [
-                              LanguageHelper.checkIfLTR(context: context)
-                                  ? const BoxShadow(
-                                color: AppColorManager.borderGrey,
-                                offset: Offset(4, -2),
-                                blurRadius: 7,
-                                spreadRadius: 1,
-                              )
-                                  : const BoxShadow(
-                                color: AppColorManager.borderGrey,
-                                offset: Offset(-4, -2),
-                                blurRadius: 7,
-                                spreadRadius: 1,
-                              )
-                            ]),
-                      ),
                       Flexible(
                         child: AppTextWidget(
                             text: "name",
@@ -129,7 +103,7 @@ class ItemCard extends StatelessWidget {
                         ),
                         child: AppTextWidget(
                             maxLines: 2,
-                            text: "200\$",
+                            text: "${200*Random().nextInt(190)}",
                             fontSize: FontSizeManager.fs16,
                             fontWeight: FontWeight.w700,
                             color: AppColorManager.textAppColor),

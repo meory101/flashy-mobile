@@ -32,7 +32,6 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: SingleChildScrollView(
           child:
-
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -1,3 +1,5 @@
+import 'package:flashy/core/resource/icon_manager.dart';
+import 'package:flashy/core/resource/image_manager.dart';
 import 'package:flutter/cupertino.dart';
 import '../../../../core/helper/language_helper.dart';
 import '../../../../core/resource/color_manager.dart';
@@ -6,7 +8,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import '../../../../core/widget/image/main_image_widget.dart';
 
-
 /// Eng.Nour Othman(meory)*
 
 class HomeBanners extends StatelessWidget {
@@ -14,9 +15,7 @@ class HomeBanners extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-
-      Column(
+    return Column(
       children: [
         CarouselSlider(
             options: CarouselOptions(
@@ -34,8 +33,8 @@ class HomeBanners extends StatelessWidget {
                           BorderRadius.circular(AppRadiusManager.r15)),
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   child: MainImageWidget(
-                    imageUrl: "",
-                  ))
+                    imagePath: AppImageManager.splash,
+                    ))
             ]),
         SizedBox(
           height: AppHeightManager.h1point8,
